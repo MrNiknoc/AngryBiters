@@ -1,0 +1,20 @@
+---------------------------------------------------------------------------------------------------
+Version: 0.0.4
+Date: 01. 23. 2023
+  Tweaks:
+    - Added a thanks for playing message.
+---------------------------------------------------------------------------------------------------
+Version: 0.0.3
+Date: 01. 16. 2023
+  Bugfixes:
+    - Made AngryBiters more resistant to crashes. Now instead of crashing when things aren't how we expect them to be, we just do nothing and don't crash!
+---------------------------------------------------------------------------------------------------
+Version: 0.0.2
+Date: 01. 02. 2023
+  Bugfixes:
+    - Fixed an incompatibility with Krastorio2.
+---------------------------------------------------------------------------------------------------
+Version: 0.0.1
+Date: 01. 01. 2023
+  Major Features:
+    - Initial release.

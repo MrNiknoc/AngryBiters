@@ -1,0 +1,14 @@
+{
+    "name": "AngryBiters",
+    "version": "0.0.4",
+    "title": "Angry Biters",
+    "author": "MrNiknoc",
+    "factorio_version": "1.1",
+    "contact": "Niknoc#8830 on Discord",
+    "description": "Enemies enrage when they hit 50% hp. (2x speed, 2x attack speed, 2x healing regen, 4x pursuit distance.)",
+    "dependencies": [
+        "base >= 1.1.0",
+        "? Rampant >= 3.1.2"
+    ],
+    "homepage": "https://discord.gg/q3tSrs3uRy"
+}
