@@ -14,13 +14,16 @@ function EntityDamaged(event)
             -- and it doesn't die
             if final_health > 0 then
                 -- and its name doesn't contain ab-enraged
-                if not string.find(name, "ab%-enraged") then
-                    -- replace it with the enraged version of it.
-                    local direction = entity.direction
                     local enragedName = "ab-enraged-" .. name
-                    entity.destroy()
-                    local enragedEntity = surface.create_entity({name = enragedName, position = position, direction = direction})
-                    enragedEntity.health = final_health
+                    -- and an enraged version of the entity exists
+                    if game.entity_prototypes[enragedName] then
+                        -- replace it with the enraged version of it.
+                        local direction = entity.direction
+                        local force = entity.force
+                        entity.destroy()
+                        local enragedEntity = surface.create_entity({name = enragedName, position = position, direction = direction, force = force})
+                        enragedEntity.health = final_health
+                    end
                 end
             end
         elseif entity.get_health_ratio() > 0.6 then
