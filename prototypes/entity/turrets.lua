@@ -1,8 +1,16 @@
 -- This is where we create prototypes for enraged turrets (specifically worms)
 
 local enragedTurrets = {}
+local blacklistedTurretNameWords =
+{
+    "boss%-fire%-shooter"
+}
+
 for name, prototype in pairs(data.raw.turret) do
     if string.find(name, "ab%-enraged%-") then goto continue end
+    for _, value in ipairs(blacklistedTurretNameWords) do
+        if string.find(name, value) then goto continue end
+    end
     local enragedTurret = table.deepcopy(data.raw["turret"][name])
     local nameWords = {}
     for word in string.gmatch(enragedTurret.name, "%w*") do

@@ -1,4 +1,27 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.0.8
+Date: 09. 2. 2023
+  Tweaks:
+    - Added a bunch of mods as optional dependencies.
+---------------------------------------------------------------------------------------------------
+Version: 0.0.7
+Date: 08. 31. 2023
+  Bugfixes:
+    - Removed Mining Drones as a dependency (it fixed the crashes but broke functionality).
+    - Added a check that stops the mod from spawning an enraged version of a Unit if the enraged version doesn't exist (thanks Wietlol).
+---------------------------------------------------------------------------------------------------
+Version: 0.0.6
+Date: 08. 28. 2023
+  Bugfixes:
+    - Added Mining Drones as a dependency to fix crashes.
+---------------------------------------------------------------------------------------------------
+Version: 0.0.5
+Date: 05. 4. 2023
+  Tweaks:
+    - Fixed biters spawning angry, they should only be angry if they get taken below 50% hp.
+    - Fixed a bug where units/turrets were losing their force when becoming enraged/unenraged.
+    - Made the thanks for playing message not display if What Lies Within is also enabled.
+---------------------------------------------------------------------------------------------------
 Version: 0.0.4
 Date: 01. 23. 2023
   Tweaks:

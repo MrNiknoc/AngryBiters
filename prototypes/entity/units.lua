@@ -1,8 +1,20 @@
 -- add enraged types of all units. this should be at the bottom of the file so that we put our custom units in first and this can create
 -- enraged versions of those.
 local enragedUnits = {}
+local blacklistedUnitNameWords =
+{
+    "msi",
+    "protomolecule",
+    "david",
+    "boss",
+    "mining-drone"
+}
+
 for name, prototype in pairs(data.raw.unit) do
     if string.find(name, "ab%-enraged%-") then goto continue end
+    for _, value in ipairs(blacklistedUnitNameWords) do
+        if string.find(name, value) then goto continue end
+    end
     local enragedUnit = table.deepcopy(data.raw["unit"][name])
     local nameWords = {}
     for word in string.gmatch(enragedUnit.name, "%w*") do
